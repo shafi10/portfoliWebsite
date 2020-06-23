@@ -1,0 +1,188 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Utilities */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Navbar */
+.navbar {
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 1px var(--primary-color);
+    opacity: 0.9;
+  }
+  
+  .navbar ul {
+    display: flex;
+  }
+  
+  .navbar a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+  }
+  
+  .navbar a:hover {
+    color: orange;
+  }
+
+  .main{
+    padding: 100px 0 0 100px;
+    position: absolute;
+  }
+
+  .main p{
+    font-size: 1.5rem;  
+    color: blueviolet;
+    margin-bottom: 40px;
+  }
+  .main h1,
+  .about h1,
+  .skills h1,
+  .contact h1{
+      font-size: 3rem;
+      color: cornflowerblue;
+  }
+
+
+
+  .assets-side img{
+    width: 400px;
+    margin-top: 80px;
+    position: relative;
+    left: 85%;
+    right: 85%;
+    transform: translateX(-70%);
+}
+
+.about p, 
+.projects p,
+.skills > p{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.projects h1{
+  font-size: 1rem;
+  color: cornflowerblue;
+}
+.projects button{
+    cursor: pointer;
+    background-color: orange;
+    padding: 5px 5px;
+    border: 2px solid orange;
+    margin-bottom: 20px;
+}
+
+.about a,
+.about button,
+.contact button{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 10px 30px;
+    display: inline-block ;
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+.skills-card{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.skills-card div{
+  border: 2px solid black;
+  border-radius: 15px 50px;
+  padding: 20px;
+  margin: 10px 10px;
+  position: relative;
+  z-index: 1;
+
+}
+
+.skills-card p{
+  max-width: 100%;
+  font-size: .6rem;
+  margin-top: 10px;
+  color: tomato;
+  font-weight: 600;
+}
+
+.skills img{
+  width: 60px;
+}
+
+.skills h3{
+  text-transform: uppercase;
+  color: mediumslateblue;
+  margin-top: 10px;
+
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: black;
+}
+textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 6px;
+  color: black;
+}
+
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+@media only screen and (max-width: 520px) {
+  .assets-side img{
+      opacity: 0;
+  }
+}
