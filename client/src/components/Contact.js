@@ -1,4 +1,5 @@
 import React ,{Fragment,useState} from 'react';
+import axios from 'axios';
 
 
 const Contact = ()=>{
@@ -9,6 +10,19 @@ const Contact = ()=>{
         des:''
     })
     const { name,email,phone,des} = formData;
+
+    let submitData = async (formData) =>{
+        const config = {
+            headesrs:{
+              'Content-type':'application/json'
+            }
+          }
+        try {
+            const res = await axios.post('/add-contact', formData, config);
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const onChange = e => setFormData({...formData, [e.target.name]:e.target.value})
     return (
         <Fragment>
@@ -16,7 +30,7 @@ const Contact = ()=>{
                     <h1>Contact Me</h1>
                     
                     <form onSubmit={e=>{
-                        console.log(formData);
+                        submitData(formData)
                         setFormData({
                             name:'',email:'',phone:'',des:''
                         })
